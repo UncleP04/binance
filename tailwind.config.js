@@ -19,7 +19,11 @@ module.exports = {
         header: '#e5e5e5',
         text: '#5e6673',
         link: '#e1b507',
-        faq: 'rgb(40, 26, 0)'
+        faq: 'rgb(40, 26, 0)',
+        modal: '#20222a'
+      },
+      fontFamily: {
+        textfont: ['REM', 'sans-serif'],
       }
     },
   },

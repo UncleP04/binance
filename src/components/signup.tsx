@@ -14,7 +14,6 @@ import "../styles/styles.css";
 import Nav from "./nav";
 import { NextRouter } from "next/router";
 
-
 interface SigninComponentProps {
   router: NextRouter; // Define the router prop
 }
@@ -28,6 +27,15 @@ const Signin: React.FC<SigninComponentProps>= ({ router }) => {
       const result = await signInWithPopup(auth, gooogleAuth);
       if (result.user) {
         router.push("/referform");
+        // setTimeout(() => {
+        //   router.push({
+        //     pathname: "/dashboard",
+        //     query: {
+        //       displayName: result.user.displayName,
+        //       photoURL: result.user.photoURL,
+        //     },
+        //   }); // Redirect to dashboard page with query parameters after a delay
+        // }, 3000);
       }
     } catch (error) {
       console.error("Error signing in:", error);
@@ -62,7 +70,7 @@ const Signin: React.FC<SigninComponentProps>= ({ router }) => {
                 </Link>
               </button>
             </div>
-            <div onClick={() => auth.signOut()}>
+            {/* <div onClick={() => auth.signOut()}>
               {user ? (
                 <div className="flex flex-col items-center gap-2 mt-4">
                   <p>Welcome, {user.displayName}</p>
@@ -79,7 +87,7 @@ const Signin: React.FC<SigninComponentProps>= ({ router }) => {
                   )}
                 </div>
               ) : null}
-            </div>
+            </div> */}
             <div className="py-3 my-4 px-4 w-[100%] bg-text text-header rounded-md text-center">
               <AppleIcon className="float-left text-primary" />
               <button className="font-semibold capitalize">
@@ -123,7 +131,7 @@ const Signin: React.FC<SigninComponentProps>= ({ router }) => {
               Sign up to get 100 USDT trading fee rebate!
               <Link
                 href=""
-                className="p-1 text-primaryhv text-[15px] rounded-md bg-faq block md:hidden"
+                className="w-[50px] p-1 text-primaryhv text-[15px] rounded-md bg-faq block md:hidden"
               >
                 FAQS
               </Link>

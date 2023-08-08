@@ -1,18 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 
 body,html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'REM', sans-serif;
+  background: #181A20;
 }
 
-h1,h2,h3,h4,h5,h6,p,button,span,div,i,link{
-  font-family: 'Lato', sans-serif;
+h1,h2,h3,h4,h5,h6,p{
+  font-family: 'REM', sans-serif;;
 }
 
 /* .hello{
