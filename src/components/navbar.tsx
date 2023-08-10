@@ -13,6 +13,7 @@ import { MdNotifications } from "react-icons/md";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { auth } from "./firebase";
+import CryptoData from "./organisms/cryptodata";
 
 const Navbar: React.FC = () => {
   const router = useRouter();
@@ -37,7 +38,7 @@ const Navbar: React.FC = () => {
               onMouseEnter={() => handleMouseEnter("Crypto")}
               onMouseLeave={handleMouseLeave}
             >
-              <CryptoModal text="Crypo" />
+              <CryptoData />
               <MdArrowUpward
                 size={20}
                 className={`text-text ${

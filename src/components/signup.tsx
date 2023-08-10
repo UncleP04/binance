@@ -47,15 +47,15 @@ const Signin: React.FC<SigninComponentProps>= ({ router }) => {
   }, [user]);
 
   return (
-    <div className="bg-dark h-[100vh]">
+    <div className="bg-dark">
       <Nav />
-      <section className="bg-dark register w-[100%] p-4 md:px-[10%] md:py-[5%] grid gap-10 grid-cols-1 md:grid-cols-2 justify-center items-center">
+      <section className="bg-dark register w-[100%] p-4 md:px-[10%] md:py-[3%] grid gap-10 grid-cols-1 md:grid-cols-2 justify-center items-center">
         <div className="md:px-[2%]">
           <h1 className="text-header hidden md:block font-semibold text-[1.5em] md:text-[2em] capitalize">
             Welcome to Binance!
           </h1>
           <form action="" className="py-4 w-[100%] lg:w-[400px] text-center">
-            <div className="py-3 px-3 md:px-4 w-[100%] bg-primary text-dark rounded-md font-semibold capitalize hover:bg-primaryhv">
+            <div className="py-3 px-3 md:px-4 w-[100%] bg-primary text-dark rounded-md capitalize hover:bg-primaryhv">
               <PersonIcon className="float-left" />
               <button className="text-center">
                 Sign up with email or phone
@@ -64,33 +64,15 @@ const Signin: React.FC<SigninComponentProps>= ({ router }) => {
             <p className="py-4 text-center text-text text-[20px]">or</p>
             <div className="py-3 my-2 px-4 w-[100%] bg-text text-header rounded-md text-center">
               <GoogleIcon className="float-left text-primary" />
-              <button className="font-semibold capitalize">
+              <button className=" capitalize">
                 <Link href="" onClick={signin}>
                   Continue with Google
                 </Link>
               </button>
             </div>
-            {/* <div onClick={() => auth.signOut()}>
-              {user ? (
-                <div className="flex flex-col items-center gap-2 mt-4">
-                  <p>Welcome, {user.displayName}</p>
-                  {user.photoURL ? (
-                    <Image
-                      src={user.photoURL}
-                      alt="user.png"
-                      width={100}
-                      height={100}
-                      className="w-20 h-20 rounded-full"
-                    />
-                  ) : (
-                    <div>No profile image available</div>
-                  )}
-                </div>
-              ) : null}
-            </div> */}
             <div className="py-3 my-4 px-4 w-[100%] bg-text text-header rounded-md text-center">
               <AppleIcon className="float-left text-primary" />
-              <button className="font-semibold capitalize">
+              <button className=" capitalize">
                 <Link href="">Continue with Apple</Link>
               </button>
             </div>
@@ -127,7 +109,7 @@ const Signin: React.FC<SigninComponentProps>= ({ router }) => {
             />
           </div>
           <div className="text-center">
-            <h2 className="font-bold text-header text-start md:text-center py-4 md:text-text text-[20px]">
+            <h2 className="font-bold text-header text-start md:text-center py-4 text-[20px]">
               Sign up to get 100 USDT trading fee rebate!
               <Link
                 href=""
