@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import HoverModal from "./NavModals/hovermodal";
-import CryptoModal from "./NavModals/cryptomodal";
-import MarketModal from "./NavModals/markets";
-import TradeModal from "./NavModals/trademodal";
-import DeriveModal from "./NavModals/derivemodal";
+import HoverModal from "../NavModals/hovermodal";
+import CryptoModal from "../NavModals/cryptomodal";
+import MarketModal from "../NavModals/markets";
+import TradeModal from "../NavModals/trademodal";
+import DeriveModal from "../NavModals/derivemodal";
 import { MdArrowUpward, MdSearch } from "react-icons/md";
-import FinanceModal from "./NavModals/financemodal";
-import WebModal from "./NavModals/webmodal";
+import FinanceModal from "../NavModals/financemodal";
+import WebModal from "../NavModals/webmodal";
 import LanguageIcon from "@mui/icons-material/Language";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import { MdNotifications } from "react-icons/md";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { auth } from "./firebase";
+import { auth } from "../register/firebase";
 
 const Navbar: React.FC = () => {
   const router = useRouter();
@@ -110,19 +110,6 @@ const Navbar: React.FC = () => {
                 }`}
               />
             </li>
-            {/* <li
-              className="flex justify-center items-center text-[15px] py-4"
-              onMouseEnter={() => handleMouseEnter("Categories")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <HoverModal text="Categories" />
-              <MdArrowUpward
-                size={20}
-                className={`text-text ${
-                  hoveredItem === "Categories" ? "rotate-180" : "rotate-0"
-                }`}
-              />
-            </li> */}
           </ul>
         </div>
         <div className="float-right">

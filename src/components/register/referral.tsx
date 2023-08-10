@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Nav from "./nav";
+import Nav from "../navbars/nav";
 import Link from "next/link";
-import PopupModal from "./modal";
+import PopupModal from "../modal";
 
 const Referral: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
