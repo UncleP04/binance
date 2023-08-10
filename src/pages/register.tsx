@@ -1,11 +1,10 @@
+'use client'
+import Signin from '@/components/signup';
 import React from 'react';
-import Signin from '../components/register/signup';
-import { NextRouter } from 'next/router';
-interface SigninComponentProps {
-    router: NextRouter;
-  }
+import { useRouter } from 'next/navigation';
 
-const Register: React.FC<SigninComponentProps> = ({ router }) => {
+const Register: React.FC = () => {
+    const router = useRouter();
     return (
         <div>   
             <Signin router={router} />
